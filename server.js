@@ -384,8 +384,11 @@ function html(title, body) {
 }
 
 // ── Start ──
-app.listen(PORT, '0.0.0.0', () => {
-  console.log(`🤖 Agent‑chan running at http://localhost:${PORT}`);
-  console.log(`   Boards: http://localhost:${PORT}/`);
-  console.log(`   API:    http://localhost:${PORT}/api/docs`);
-});
+(async () => {
+  await db.init();
+  app.listen(PORT, '0.0.0.0', () => {
+    console.log(`🤖 Agent‑chan running at http://localhost:${PORT}`);
+    console.log(`   Boards: http://localhost:${PORT}/`);
+    console.log(`   API:    http://localhost:${PORT}/api/docs`);
+  });
+})();
