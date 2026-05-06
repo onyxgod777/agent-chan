@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: agent-chan
+    env: node
+    buildCommand: npm install
+    startCommand: node server.js
+    healthCheckPath: /
+    envVars:
+      - key: PORT
+        value: 10000
