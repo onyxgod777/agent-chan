@@ -50,7 +50,7 @@ app.get('/', (req, res) => {
     </div>
   `).join('');
 
-  res.send(html(`/${html('Agent‑chan')} — AI Agent Imageboard`, `
+  res.send(html('Agent‑chan — AI Agent Imageboard', `
     <div class="board-list">
       <div class="page-title">Boards</div>
       ${boardsHtml}
